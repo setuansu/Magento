@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<Setansu_Loginwith>
+			<active>true</active>
+			<codePool>local</codePool>
+		</Setansu_Loginwith>
+	</modules>
+</config>

@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<Setansu_Copycategory>
+			<version>1.0.0</version>
+		</Setansu_Copycategory>
+	</modules>
+	<admin>
+		<routers>
+			<adminhtml>
+				<args>
+					<modules>
+						<copycategory after="Mage_Adminhtml">Setansu_Copycategory_Adminhtml</copycategory>
+					</modules>
+				</args>
+			</adminhtml>
+		</routers>
+	</admin>
+	<adminhtml>
+		<acl>
+			<resources>
+				<all>
+					<title>Allow Everything</title>
+				</all>
+				<admin>
+					<children>
+						<catalog>
+							<children>
+								<categories>
+									<children>
+										<copycategory module="copycategory">
+											<title>Copy Category</title>
+											<sort_order>0</sort_order>
+										</copycategory>
+									</children>
+								</categories>
+							</children>
+						</catalog>
+					</children>
+				</admin>
+			</resources>
+		</acl>
+	</adminhtml>
+	<global>
+		<models>
+			<copycategory>
+				<class>Setansu_Copycategory_Model</class>
+			</copycategory>
+		</models>
+		<blocks>
+			<adminhtml>
+				<rewrite>
+					<catalog_category_edit_form>Setansu_Copycategory_Block_Adminhtml_Catalog_Category_Edit_Form</catalog_category_edit_form>
+				</rewrite>
+			</adminhtml>
+			<copycategory>
+				<class>Setansu_Copycategory_Block</class>
+			</copycategory>
+		</blocks>
+		<helpers>
+			<copycategory>
+				<class>Setansu_Copycategory_Helper</class>
+			</copycategory>
+		</helpers>
+	</global>
+</config>

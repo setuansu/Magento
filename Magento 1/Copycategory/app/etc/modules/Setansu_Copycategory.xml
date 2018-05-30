@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+	<modules>
+		<Setansu_Copycategory>
+			<active>true</active>
+			<codePool>local</codePool>
+		</Setansu_Copycategory>
+	</modules>
+</config>
